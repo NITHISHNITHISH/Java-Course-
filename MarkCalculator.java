@@ -10,32 +10,22 @@ public class MarkCalculator
 		int total=totalMarks(subjects);
 		int average=averageCal(subjects,total);
 		int percentage=percentageCal(subjects,total);
-		
 		valuePrint(total,average,percentage);
 
 	}
 
 	public static int[] getMarks() {
 		
-		int sub[]=new int[5];
 		Scanner scan= new Scanner(System.in);
+		System.out.println("Enter total no of subjects");
+		int totalSubCount=scan.nextInt();
+		int sub[]=new int[totalSubCount];
 		
-		System.out.println("Enter Subject 1 Marks :");
-		sub[0]=scan.nextInt();
-		
-		
-		System.out.println("Enter Subject 2 Marks :");
-		sub[1]=scan.nextInt();
-		
-		System.out.println("Enter Subject 3 Marks :");
-		sub[2]=scan.nextInt();
-		
-		System.out.println("Enter Subject 4 Marks :");
-		sub[3]=scan.nextInt();
-		
-		System.out.println("Enter Subject 5 Marks :");
-		sub[4]=scan.nextInt();
-		
+		for(int i=0;i<sub.length;i++) {
+			
+		System.out.println("Enter Subject :"+(i+1)+" Marks :");
+		sub[i]=scan.nextInt();
+		}
 		return sub;
 	}
 	
