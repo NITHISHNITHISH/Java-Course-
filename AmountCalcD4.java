@@ -28,6 +28,13 @@ public class AmountCalcD4 {
 		System.out.print("10\t=");
 		d10=scan.nextInt();
 		
+		System.out.printf("%4s%2s%3d\n","2000","=",d2000);
+		System.out.printf("%4s%2s%3d\n","500","=",d500);
+		System.out.printf("%4s%2s%3d\n","200","=",d200);
+		System.out.printf("%4s%2s%3d\n","100","=",d200);
+		System.out.printf("%4s%2s%3d\n","50","=",d50);
+		System.out.printf("%4s%2s%3d\n","10","=",d10);
+		
 		int amount =(2000*d2000)+(500*d500)+(200*d200)+(100*d100)+(50*d50);
 		
 		System.out.println("total amount for the above denominations : "+amount);
