@@ -9,7 +9,7 @@ public class VoteEligibility {
 		String name;
 		char gender;
 		int age;
-		boolean eligibility = false;
+		boolean eligibility ;
 		String output;
 		
 		Scanner scan =new Scanner(System.in);
@@ -24,7 +24,7 @@ public class VoteEligibility {
 		
 		eligibility= age>18 ? true :false;
 		
-		output = eligibility ? "Eligible" : "not eligible"; 
+		output = eligibility ? (gender=='M' ? ("Mr."+name+" is Eligible to vote") : ("Mrs."+name+" is eligible to vote")) : "Sorry!!! Not Eligible"; 
 		
 		System.out.println(output);
 	}
