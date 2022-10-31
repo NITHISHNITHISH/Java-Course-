@@ -10,34 +10,34 @@ public class AmountCalcD4 {
 		Scanner scan = new Scanner(System.in);
 		
 
-		System.out.print("2000\t=");
+		System.out.printf("%4s%2s","2000","=");
 		d2000=scan.nextInt();
 		
-		System.out.print("500\t=");
+		System.out.printf("%4s%2s","500","=");
 		d500=scan.nextInt();
 
-		System.out.print("200\t=");
+		System.out.printf("%4s%2s","200","=");
 		d200=scan.nextInt();
 
-		System.out.print("100\t=");
+		System.out.printf("%4s%2s","100","=");
 		d100=scan.nextInt();
 
-		System.out.print("50\t=");
+		System.out.printf("%4s%2s","50","=");
 		d50=scan.nextInt();
 
-		System.out.print("10\t=");
+		System.out.printf("%4s%2s","10","=");
 		d10=scan.nextInt();
 		
-		System.out.printf("%4s%2s%3d\n","2000","=",d2000);
-		System.out.printf("%4s%2s%3d\n","500","=",d500);
-		System.out.printf("%4s%2s%3d\n","200","=",d200);
-		System.out.printf("%4s%2s%3d\n","100","=",d200);
-		System.out.printf("%4s%2s%3d\n","50","=",d50);
-		System.out.printf("%4s%2s%3d\n","10","=",d10);
+		System.out.printf("%4s%2s%2d\n","2000","=",d2000);
+		System.out.printf("%4s%2s%2d\n","500","=",d500);
+		System.out.printf("%4s%2s%2d\n","200","=",d200);
+		System.out.printf("%4s%2s%2d\n","100","=",d200);
+		System.out.printf("%4s%2s%2d\n","50","=",d50);
+		System.out.printf("%4s%2s%2d\n","10","=",d10);
 		
 		int amount =(2000*d2000)+(500*d500)+(200*d200)+(100*d100)+(50*d50);
 		
-		System.out.println("total amount for the above denominations : "+amount);
+		System.out.println("Total amount for the above denominations : "+amount);
 
 	}
 

@@ -37,6 +37,8 @@ public class DenominationCalcD4 {
 		 coins = amount;
 		
 		
+		 Sys
+		 
 		System.out.printf("%4s%2s%2d%2s%5d\n","2000","*",d2000,"=",(2000*d2000));
 		System.out.printf("%4s%2s%2d%2s%5d\n","500","*",d500,"=",(500*d500));
 		System.out.printf("%4s%2s%2d%2s%5d\n","100","*",d100,"=",(100*d100));
