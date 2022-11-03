@@ -21,10 +21,11 @@ public class VoteEligibility {
 		System.out.print("Age");
 		age=scan.nextInt();
 		
-		
 		eligibility= age>18 ? true :false;
 		
 		output = eligibility ? (gender=='M' ? ("Mr."+name+" is Eligible to vote") : ("Mrs."+name+" is eligible to vote")) : "Sorry!!! Not Eligible"; 
+		
+		
 		
 		System.out.println(output);
 	}
