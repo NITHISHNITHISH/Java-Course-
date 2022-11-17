@@ -11,7 +11,7 @@ public class PrimeNumber {
 		System.out.println("Enter the number ");
 		a=scan.nextInt();
 		if(a>1) {
-		if(a%2 != 0) {
+		if(a%2 != 0 || a==2) {
 			System.out.println(a+" is a Prime number");
 		}
 		else
