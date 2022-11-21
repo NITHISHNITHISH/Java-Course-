@@ -6,19 +6,50 @@ public class PrimeNumber {
 
 	public static void main(String[] args) {
 
-		int a;
-		Scanner scan=new Scanner(System.in);
+		PrimeNumber pn = new PrimeNumber();
+		pn.primeFinder1(); // with more checks
+		pn.primeFinder2(); // with less checks
+	}
+
+	public void primeFinder2() {
+
+		int num, count = 0;
+		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the number ");
-		a=scan.nextInt();
-		if(a>1) {
-		if(a%2 != 0 || a==2) {
-			System.out.println(a+" is a Prime number");
+		num = scan.nextInt();
+
+		for (int i = 2; i <= num; i++) {
+			if (num % i == 0) {
+				count++;
+				if (count > 1) {
+					System.out.println("Not a prime Number");
+					break;
+				}
+			}
+
 		}
-		else
-			System.out.println(a+"is Not a Prime Number");
+
+		if (count == 1)
+			System.out.println("Prime Number");
+	}
+
+	public void primeFinder1() {
+
+		int num, count = 0;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number ");
+		num = scan.nextInt();
+
+		for (int i = 2; i <= num; i++) {
+			if (num % i == 0)
+				count++;
+
 		}
+
+		if (count == 1)
+			System.out.println("Prime Number");
 		else
-			System.out.println("Please enter number above 1 ");
+			System.out.println("Not a Prime Number");
 	}
 
 }
