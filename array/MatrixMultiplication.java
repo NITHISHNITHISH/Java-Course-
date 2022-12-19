@@ -6,8 +6,11 @@ public class MatrixMultiplication {
 
 	public static void main(String[] args) {
 		
-		int [][] arr1= {{1,2,3},{2,3,4},{5,7,6}};
-		int [][] arr2= {{5,8},{8,6},{3,4}};
+		//int [][] arr1= {{1,2,3},{2,3,4}};
+		//int [][] arr2= {{5,8,3},{8,6,4},{3,4,4}};
+		
+		int [][] arr1= {{1,2},{4,5}};
+		int [][] arr2= {{3,4},{5,6}};
 		int row1, col1, row2, col2;
 
 		row1 = arr1.length;
@@ -18,10 +21,10 @@ public class MatrixMultiplication {
 		//
 		
 		
-		for(int i=0;i<arr1.length;i++) {
-			for(int j=0;j<arr1[i].length;j++) {
-				for(int k=0;k<arr2[i].length;k++)
-				result[i][j]=result[i][j]+(arr1[j][k]*arr2[j][k]);
+		for(int i=0;i<row1;i++) {
+			for(int j=0;j<col2;j++) {
+				for(int k=0;k<col1;k++)
+				result[i][j]=result[i][j]+(arr1[i][k]*arr2[k][j]);
 			}
 		}
 		System.out.println(Arrays.deepToString(result));

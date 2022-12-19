@@ -24,23 +24,25 @@ public class GetArrayWithoutDuplicate {
 		System.out.println("Enter the Array Elements : ");
 
 		for (int i = 0; i < size; i++) {
+			System.out.print("input["+i+"] : ");
 			input[i] = scan.nextInt();
 			
 			if(i>0) {
-				do{
+				//do{
 					for(int j=i-1;j>=0;j--) {
 						if(input[i]==input[j]) {
 							flag=true;
 							System.out.println("Duplicate not Allowed");
 							System.out.println("Enter the value other than "+input[j]);
-							System.out.print("input["+i+"] :");
-							input[i] = scan.nextInt();
+							//System.out.print("input["+i+"] :");
+							//input[i] = scan.nextInt();
+							i--;
 							break;
 						}
 						flag=false;
 					}
 					
-				}while(flag);
+				//}while(flag);
 			}
 		}
 		System.out.println("Array : "+Arrays.toString(input));

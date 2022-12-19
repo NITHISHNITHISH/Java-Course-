@@ -11,7 +11,7 @@ public class ArrayDeclaration {
 		num[1]=32;
 		num[2]=67;
 		num[3]=34;
-		num[4]=17;
+		//num[4]=17;
 		
 		
 		for(int i=0;i<num.length;i++) {

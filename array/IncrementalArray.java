@@ -13,6 +13,7 @@ public class IncrementalArray {
 		size = scan.nextInt();
 		int [] numArray = new int [size];
 		
+		
 		for(int i=0;i<size;i++) {
 			numArray[i]=scan.nextInt();
 			cnum=numArray[i];

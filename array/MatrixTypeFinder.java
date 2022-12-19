@@ -4,46 +4,48 @@ public class MatrixTypeFinder {
 
 	public static void main(String[] args) {
 
-		
-		int [][] num = {{1,0,0},{0,1,0},{0,0,1}};
-		int row = num.length;
-		int col = num[0].length;
-		int iCount=0,sCount=0,dCount=0;
-	
-		if(row == 3 && col ==3 ) {
-		for(int i=0;i<row;i++) {
-			for(int j=0;j<col;j++) {
-				
-				if(num[0][0] == 1 && num[1][1]==1 && num[2][2]==1) {
-					
-					if(num[i][j]==0)
-						iCount++;
-					
+		int[][] num = { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
+
+		typeFinder(num);
+	}
+
+	public static void typeFinder(int[][] num) {
+		int row, col;
+		int[] d = new int[3];
+
+		row = num.length;
+		col = num[0].length;
+		if (row != 3 && col != 3) {
+			System.out.println("Not a Specified Matrix");
+			return;
+		}
+
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < col; j++) {
+				if (i == j && num[i][j] != 0) {
+					d[i] = num[i][j];
+				} else if (num[i][j] != 0) {
+					System.out.println("Not a Specified Matrix");
+					return;
 				}
-				else if(num[0][0] !=1 ) {
-					if(num[0][0] == num[1][1] && num[0][0] == num[2][2]) {
-						if(num[i][j] == 0)
-							sCount++;
-					}
-					else if(num[0][0] != num[1][1] && num[0][0] != num[2][2]) {
-						if(num[i][j] == 0) {
-							dCount++;
-						}
-					}
-				}
-				
-				
-				
 			}
 		}
-		if(iCount == 6) {
+
+		boolean flag = true;
+		for (int i = 1; i < d.length; i++) {
+			if (d[0] != d[i]) {
+				flag = false;
+			}
+		}
+
+		if (flag && d[0] == 1) {
 			System.out.println("Identity Matrix");
-			else if (sCount == 6)
-			System.out.println("");
-		}
-		}
-		else
-			System.out.println("Not A Identity , Scaler,Diagonal Matrix ");
+			
+		} else if (flag && d[0] != 1) {
+			System.out.println("Scalar Matrix");
+			
+		} else
+			System.out.println("Diagonal Matrix");
 	}
 
 }

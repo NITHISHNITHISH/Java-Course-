@@ -23,7 +23,7 @@ public class ArraySorting {
 		int[] input ;
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the Array : ");
+		System.out.println("Enter size of the Array : ");
 		size = scan.nextInt();
 		input= new int[size];
 		System.out.println("Enter the Array Elements : ");
