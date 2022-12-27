@@ -24,7 +24,7 @@ public class PositionOfCharacter {
 			System.out.println("No Such character found in the String");
 	}
 	
-	public int positionFinder(String input,char element) {
+	public int positionFinder(String input,char element, int pstart) {
 		
 		
 		int position =0;

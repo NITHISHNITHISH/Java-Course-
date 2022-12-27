@@ -8,7 +8,8 @@ public class NthPositionOfCharacter {
 
 		String input;
 		char element;
-		int first,last;
+		int pstart =0 ,position = 0;
+		
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("Enter the String ");
@@ -16,47 +17,34 @@ public class NthPositionOfCharacter {
 		
 		System.out.println("Enter the Character ");
 		element = scan.next().charAt(0);
+		System.out.println("Enter the Starting position ");
+		pstart = scan.nextInt();
 		
-		
-		
-		NthPositionOfCharacter pc=new NthPositionOfCharacter();
-		 first =pc.positionFinder(input,element);
-		last =pc.positionFinder1(input,element);
-
-		if(first != 0) {
-			System.out.println("Starting position the character is : "+first);
-			System.out.println("Last position the character is : "+last);
+		NthPositionOfCharacter npc = new NthPositionOfCharacter();
+	
+		position =npc.positionFinder1(input, element, pstart);
+	
+		if(position !=0) {
+			System.out.println(element+" is found in the "+position+" after "+pstart+" th position");
 		}
-		
 		else
-			System.out.println("No Such character found in the String");
+			System.out.println("Not found ");
+
+		
 	}
 	
-	public int positionFinder(String input,char element) {
+	public int positionFinder1(String input,char element, int pstart) {
 		
 		
 		int position =0;
 		
-		for(int i=0;i<input.length();i++) {
-			if(input.charAt(i)== element)
-				return i;
-			
+		for(int i=pstart+1;i<input.length();i++) {
+			if(input.charAt(i)== element ) {
+				position = i;
+				break;
+			}
 		}
 		
 		return position;
 	}
-public int positionFinder1(String input,char element) {
-		
-		
-		int position =0;
-		
-		for(int i=0;i<input.length();i++) {
-			if(input.charAt(i)== element)
-				position =i;
-			
-		}
-		
-		return position;
-	}
-
 }
