@@ -5,6 +5,8 @@ public class StaticCar {
 	
 	private static String name ;
 	
+	int regNo;
+	
 	public static void setName(String n) {
 		name=n;
 	}
